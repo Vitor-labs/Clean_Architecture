@@ -1,12 +1,12 @@
 repos:
 -   repo: https://github.com/ambv/black
-    rev: stable
+    rev: 22.12.0
     hooks:
     - id: black
       language_version: python3.8
       stages: [commit]
 -   repo: https://github.com/PyCQA/flake8
-    rev: 3.7.9
+    rev: 6.0.0
     hooks:
     - id: flake8
       stages: [commit]
@@ -14,7 +14,7 @@ repos:
     hooks:
       - id: requirements
         name: requirements
-        entry: bash -c 'venv/bin/pip3 freeze > requirements.txt; git add requirements.txt'
+        entry: pipenv run pip freeze > requirements.txt; git add requirements.txt
         language: system
         pass_filenames: false
         stages: [commit]
