@@ -6,11 +6,11 @@ import enum
 class PetsTypes(enum.Enum):
     """Definitions of Pets Types"""
 
-    DOG = "Dog"
-    CAT = "Cat"
-    FISH = "Fish"
-    HABBIT = "Habbit"
-    TURTLE = "Turtle"
+    DOG = "DOG"
+    CAT = "CAT"
+    FISH = "FISH"
+    HABBIT = "HABBIT"
+    TURTLE = "TURTLE"
 
 
 class Pets(Base):
