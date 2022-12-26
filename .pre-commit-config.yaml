@@ -23,7 +23,7 @@ repos:
     hooks:
       - id: requirements
         name: requirements
-        entry: pip freeze > requirements.txt; git add requirements.txt
+        entry: pipenv run pip freeze > requirements.txt; git add requirements.txt
         language: system
         pass_filenames: false
         stages: [commit]
