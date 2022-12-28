@@ -22,4 +22,3 @@ pip install -r requirements.txt
 ```shell
 pytest -v -s
 ```
-update: readme info to run the project

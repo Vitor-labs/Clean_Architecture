@@ -8,9 +8,7 @@ class PetRepositoryInterface(ABC):
     """Interface to Pet Repository"""
 
     @abstractmethod
-    def insert_pet(
-        self, id: int, name: str, specie: str, age: int, user_id: int
-    ) -> Pets:
+    def insert_pet(self, name: str, specie: str, age: int, user_id: int) -> Pets:
         """Abstract Method"""
         raise NotImplementedError("Method not implemented")
 
