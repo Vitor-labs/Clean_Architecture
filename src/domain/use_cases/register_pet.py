@@ -1,13 +1,14 @@
-from abc import ABC, abstractclassmethod
+from abc import ABCMeta, abstractmethod
 from typing import Dict
 
 from src.domain.models import Pets
 
 
-class RegisterPet(ABC):
+class RegisterPet(metaclass=ABCMeta):
     """Interface to use case: Register Pet"""
 
-    @abstractclassmethod
+    @classmethod
+    @abstractmethod
     def registry(
         cls, name: str, specie: str, user: Dict[int, str], age: int = None
     ) -> Dict[bool, Pets]:
