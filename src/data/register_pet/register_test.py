@@ -1,13 +1,18 @@
 from faker import Faker
 
-from .register import RegisterPet
 from src.data.test import FindUserSpy
 from src.infra.test import PetRepositorySpy, UserRepositorySpy
+from .register import RegisterPet
 
 faker = Faker()
 
 
 def test_register_pet_success():
+    """
+    test for register per use case.
+    should be a success.
+    """
+
     pet_repo = PetRepositorySpy()
     find_user = FindUserSpy(UserRepositorySpy())
     register_pet = RegisterPet(pet_repo, find_user)
